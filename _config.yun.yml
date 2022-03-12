@@ -1,15 +1,12 @@
-# Site
-title: 三土的百草书屋
-subtitle: ''
-description: '分享生活中的点滴'
-keywords:
-author: 垚
-timezone: '2022'
+
+#起始年份
+footer:
+  since: 2022
 
 # 首页
 banner:
   enable: true
-  title: 三土的百草书屋
+  title: 垚的三味书屋
   border: true
   cloud:
     enable: true
@@ -21,4 +18,15 @@ banner:
 #公告
 notice:
   enable: true
-  content: 欢迎来到我的地盘.
+  content: 探索这个未知且奇妙的世界
+
+#社交图标
+social:
+  - name: E-Mail
+    link: mailto:wuyaorui2001@163.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+#主题
+colors:
+  primary: "#000000"
