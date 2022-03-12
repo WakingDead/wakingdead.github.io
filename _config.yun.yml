@@ -1,0 +1,24 @@
+# Site
+title: 三土的百草书屋
+subtitle: ''
+description: '分享生活中的点滴'
+keywords:
+author: 垚
+timezone: '2022'
+
+# 首页
+banner:
+  enable: true
+  title: 三土的百草书屋
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+#公告
+notice:
+  enable: true
+  content: 欢迎来到我的地盘.
