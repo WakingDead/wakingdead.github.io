@@ -9,7 +9,7 @@ description: 探索这个奇妙的世界
 keywords:
 author: 垚
 language: zh-CN
-timezone: Asia/Beijing
+timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -103,6 +103,6 @@ theme: yun
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/WakingDead/wakingdead.github.io # 比如：https://github.com/YunYouJun/yunyoujun.github.io
+  repo: https://github.com/WakingDead/wakingdead.github.io 
   branch: master # 默认使用 master 分支
   message: Update Hexo Static Content # 你可以自定义此次部署更新的说明
