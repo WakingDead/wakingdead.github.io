@@ -30,3 +30,7 @@ social:
 #主题
 colors:
   primary: "#000000"
+
+#标签图标
+wordcloud:
+  enable: true
