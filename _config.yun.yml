@@ -27,9 +27,6 @@ social:
     icon: icon-mail-line
     color: "#8E71C1"
 
-#主题
-colors:
-  primary: "#000000"
 
 #标签图标
 wordcloud:
