@@ -5,8 +5,7 @@ updated: 2022-03-13
 tags:
   - Hexo
   - 分享
-categories:
-  -我的日常 
+categories: - 我的日常 
 ---
 
 > 在经历了无数个bug和我自己都不知道怎么修好的bug之后，我的三味书屋终于搭好了

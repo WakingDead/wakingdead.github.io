@@ -1,10 +1,8 @@
 ---
-title: 写给自己关于网站后续更新以及部署的参考文档
+title: 写给自己：关于网站后续更新以及部署的参考文档
 date: 2022-03-13
-tags:
-  - 技术文档
-categories:
-  - 技术文档
+tags: - 技术文档
+categories: - 技术文档
 ---
 
 # Markdown
@@ -15,7 +13,9 @@ categories:
 # Hexo
 [云游君的教程](https://www.yunyoujun.cn/share/how-to-build-your-site/)
 
-[云游剧的主题文档教程](https://yun.yunyoujun.cn/guide/page.html#%E5%88%86%E7%B1%BB-categories)
+[云游君的主题文档教程](https://yun.yunyoujun.cn/)
+
+[云游君的代码](https://github.com/YunYouJun/yunyoujun.github.io)
 
 [官方文档](https://hexo.io/zh-cn/docs/)
 
