@@ -1,8 +1,10 @@
 ---
 title: 写给自己：关于网站后续更新以及部署的参考文档
 date: 2022-03-13
-tags: - 技术文档
-categories: - 技术文档
+tags: 
+    - 技术文档
+categories: 
+    - 技术文档
 ---
 
 # Markdown
