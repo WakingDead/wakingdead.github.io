@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="垚"><meta name="copyright" content="垚"><meta name="generator" content="Hexo 6.1.0"><meta name="theme" content="hexo-theme-yun"><title>零基础JAVA课程笔记 | 三味书屋</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.2.4/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"垚的三味书屋","version":"1.8.11","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":null},"vendors":{"darken":"https://cdn.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><meta name="description" content="第1章 内容介绍 本套Java课程内容课程阶段  第一阶段：建立编程思想  第二阶段：提升编程能力  第三阶段：分析需求，代码实现能力   第2章 JAVA 概述 什么是程序？计算机执行某些操作或解决某个问题而编写的一系列有序指令的集合 举例：计算机怎么完成1 + 1, 并把答案显示在电脑上  写一个程序（文件） int Res &#x3D; 1 + 1 System.out.printIn(“结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="零基础JAVA课程笔记">
+<meta property="og:url" content="http://example.com/2022/04/24/java-basic-teacher-hanshunping/index.html">
+<meta property="og:site_name" content="三味书屋">
+<meta property="og:description" content="第1章 内容介绍 本套Java课程内容课程阶段  第一阶段：建立编程思想  第二阶段：提升编程能力  第三阶段：分析需求，代码实现能力   第2章 JAVA 概述 什么是程序？计算机执行某些操作或解决某个问题而编写的一系列有序指令的集合 举例：计算机怎么完成1 + 1, 并把答案显示在电脑上  写一个程序（文件） int Res &#x3D; 1 + 1 System.out.printIn(“结">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-24T02:25:03.000Z">
+<meta property="article:modified_time" content="2022-05-06T13:46:51.713Z">
+<meta property="article:author" content="垚">
+<meta property="article:tag" content="-- JAVA -- 技术">
+<meta name="twitter:card" content="summary"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="垚"><img width="96" loading="lazy" src="/yun.png" alt="垚"></a><div class="site-author-name"><a href="/about/">垚</a></div><span class="site-name">三味书屋</span><sub class="site-subtitle"></sub><div class="site-desciption">探索这个奇妙的世界</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">10</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">7</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:wuyaorui2001@163.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">第1章 内容介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%A5%97Java%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">本套Java课程内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-JAVA-%E6%A6%82%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">第2章 JAVA 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-JAVA%E5%8E%86%E5%8F%B2%EF%BC%88%E9%9D%9E%E9%87%8D%E7%82%B9%EF%BC%8C%E7%95%A5%E8%BF%87%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">2.2 JAVA历史（非重点，略过）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-JAVA%E7%89%B9%E7%82%B9"><span class="toc-number">2.2.</span> <span class="toc-text">2.1 JAVA特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-JAVA%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 JAVA运行机制以及运行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-Java%E8%AF%AD%E8%A8%80%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%8C%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 Java语言的特点，跨平台性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Java%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6-%E2%80%94%E2%80%94-Java%E8%99%9A%E6%8B%9F%E6%9C%BA-JVM-java-virtual-machine"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Java核心机制 —— Java虚拟机(JVM java virtual machine)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E4%BB%80%E4%B9%88%E6%98%AFJDK%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AFJRE"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.2 什么是JDK？什么是JRE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-JAVA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 JAVA开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fpath"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.4.1 配置环境变量path</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-DOS%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 DOS常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-JAVA%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 JAVA快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.6.1.</span> <span class="toc-text">2.6.1 快速入门实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2-java%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">2.6.2.</span> <span class="toc-text">2.6.2 java执行流程分析</span></a></li></ol></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="http://example.com/2022/04/24/java-basic-teacher-hanshunping/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="垚"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="三味书屋"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">零基础JAVA课程笔记</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2022-04-24 10:25:03" itemprop="dateCreated datePublished" datetime="2022-04-24T10:25:03+08:00">2022-04-24</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="修改时间：2022-05-06 21:46:51" itemprop="dateModified" datetime="2022-05-06T21:46:51+08:00">2022-05-06</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/JAVA/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">JAVA</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/JAVA-%E6%8A%80%E6%9C%AF/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">-- JAVA -- 技术</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="第1章-内容介绍"><a href="#第1章-内容介绍" class="headerlink" title="第1章 内容介绍"></a>第1章 内容介绍</h1><hr>
+<h2 id="本套Java课程内容"><a href="#本套Java课程内容" class="headerlink" title="本套Java课程内容"></a>本套Java课程内容</h2><p>课程阶段</p>
+<ul>
+<li><p>第一阶段：建立编程思想</p>
+</li>
+<li><p>第二阶段：提升编程能力</p>
+</li>
+<li><p>第三阶段：分析需求，代码实现能力</p>
+</li>
+</ul>
+<h1 id="第2章-JAVA-概述"><a href="#第2章-JAVA-概述" class="headerlink" title="第2章 JAVA 概述"></a>第2章 JAVA 概述</h1><hr>
+<p>什么是程序？<br>计算机执行某些操作或解决某个问题而编写的一系列有序指令的集合</p>
+<p>举例：计算机怎么完成1 + 1, 并把答案显示在电脑上</p>
+<ol>
+<li><p>写一个程序（文件）<br> int Res &#x3D; 1 + 1<br> System.out.printIn(“结果” &#x3D; res)</p>
+</li>
+<li><p>把程序交给计算机执行<br> 首先执行第一条语句，得到Res &#x3D; 2<br> 然后执行第二条语句，输出”结果” &#x3D; 2</p>
+</li>
+</ol>
+<p>完整程序Hello_test.java，完成1+1并输出<br>写一个程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">1</span> + <span class="number">1</span></span><br><span class="line">        <span class="comment">//显示</span></span><br><span class="line"></span><br><span class="line">        System.out.printIn(<span class="string">&quot;结果=&quot;</span> + res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<blockquote>
+<p>找到该程序的文件夹所在地，在最上面的目录栏目，输入cmd，然后在终端中先编译该文件（需要先把JDK配置好），然后输入javac Hello_test.java，对文件进行边缘，然后输入java Hello_test, 就能够正确输出结果了</p>
+</blockquote>
+<h2 id="2-2-JAVA历史（非重点，略过）"><a href="#2-2-JAVA历史（非重点，略过）" class="headerlink" title="2.2 JAVA历史（非重点，略过）"></a>2.2 JAVA历史（非重点，略过）</h2><h2 id="2-1-JAVA特点"><a href="#2-1-JAVA特点" class="headerlink" title="2.1 JAVA特点"></a>2.1 JAVA特点</h2><ol>
+<li><p>Java语言是面向对象的（oop）</p>
+</li>
+<li><p>JAVA语言是健壮的。JAVA的强类机制、异常处理、垃圾的自动收集等是JAVA程序健壮性的重要保证</p>
+</li>
+<li><p>Java语言是跨平台性的。<br> 一个编译好的.class文件可以在多个系统下运行<br> 编写一个.java程序，编译之后得到.class文件，该文件可以在不同的操作系统上运行而不用重新编译（相当于出国，自带翻译）</p>
+</li>
+<li><p>Java语言是解释型的<br> 解释性语言：javascript,php,java 编译型语言：c&#x2F;c++<br> 区别是：<br> 解释性语言：编译后的代码，不能直接被机器执行，需要解释器来执行<br> 编译性语言，编译后的代码（已经是二进制了），可以直接被机器执行，c&#x2F;c++</p>
+<p> 具体而言，编译过后得到的class文件需要一个解释器来执行class文件</p>
+</li>
+</ol>
+<p>Java的开发工具</p>
+<ul>
+<li><p>editplus、notepad++</p>
+</li>
+<li><p>Sublime Text 下载地址：<a target="_blank" rel="noopener" href="https://www.sublimetext.com/3">https://www.sublimetext.com/3</a></p>
+</li>
+<li><p>IDEA</p>
+</li>
+<li><p>eclipse</p>
+</li>
+<li><p>工具选择<br>  前期用文本编辑器，到大家对java有一定了解之后，我们再使用IDEA和Eclipse开发工具</p>
+<h2 id="2-3-JAVA运行机制以及运行过程"><a href="#2-3-JAVA运行机制以及运行过程" class="headerlink" title="2.3 JAVA运行机制以及运行过程"></a>2.3 JAVA运行机制以及运行过程</h2></li>
+</ul>
+<h3 id="2-3-1-Java语言的特点，跨平台性"><a href="#2-3-1-Java语言的特点，跨平台性" class="headerlink" title="2.3.1 Java语言的特点，跨平台性"></a>2.3.1 Java语言的特点，跨平台性</h3><blockquote>
+<p>Test.Java程序 →(这个过程叫编译, 命令是javac) Test.class →(这个过程叫运行，命令是java) 通过JVM在不同的操作系统上运行<br>因为有了JVM，同一个Java程序在三个不同的操作系统中都可以执行。这样就实现了Java程序的跨平台性<br>JVM包含在JDK里面</p>
+</blockquote>
+<h3 id="2-3-2-Java核心机制-——-Java虚拟机-JVM-java-virtual-machine"><a href="#2-3-2-Java核心机制-——-Java虚拟机-JVM-java-virtual-machine" class="headerlink" title="2.3.2 Java核心机制 —— Java虚拟机(JVM java virtual machine)"></a>2.3.2 Java核心机制 —— Java虚拟机(JVM java virtual machine)</h3><blockquote>
+<p>基本介绍</p>
+</blockquote>
+<ol>
+<li>JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器，<strong>包含在JDK中</strong>。</li>
+<li>对于不同的平台，有不同的虚拟机。（跨平台性的实现）</li>
+<li>Java虚拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br> 见图2.3.1<image  src = "H:\computer_science_study\personal_website\github\wakingdead.github.io\source\images\java-basic-teacher-hanshunping-2.3.1.png"></li>
+</ol>
+<h3 id="2-3-2-什么是JDK？什么是JRE"><a href="#2-3-2-什么是JDK？什么是JRE" class="headerlink" title="2.3.2 什么是JDK？什么是JRE"></a>2.3.2 什么是JDK？什么是JRE</h3><p><strong>JDK基本介绍</strong></p>
+<ul>
+<li>JDK的全称是（JAVA Development Kit, <strong>JAVA开发工具包</strong>）<ul>
+<li><strong>JDK &#x3D; JRE + java的开发工具</strong>[java, javac, javadoc, javap等]</li>
+</ul>
+</li>
+<li>JDK是提供给开发人员使用的，其中包含了Java的开发工具，也包括了JRE。所以安装了JDK，就不用再单独安装JRE了</li>
+</ul>
+<p><strong>JRE基本介绍</strong></p>
+<ul>
+<li>JRE（Java Runtime Environment， <strong>Java运行环境</strong>）<ul>
+<li>JRE &#x3D; JVM + java的核心类库[类]</li>
+</ul>
+</li>
+<li>包括Java虚拟机（JVM java Virtual Machine）和Java程序员所需的核心类库</li>
+<li>如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可<blockquote>
+<p>即程序的开发者需要完整的JDK，但是程序的使用者只需下载JRE即可</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>小结 JDK、JRE和JVM的包含关系</strong></p>
+<ol>
+<li>JDK &#x3D; JRE + 开发工具集（例如Javac, java编译工具等）</li>
+<li>JRE &#x3D; JVM + JavaSE标准类库(java核心类库)</li>
+<li>JDK &#x3D; JVM + Java SE标准类库 + 开发工具集</li>
+<li>如果只想运行开发好的.class文件 只需要JRE</li>
+</ol>
+<h2 id="2-4-JAVA开发环境搭建"><a href="#2-4-JAVA开发环境搭建" class="headerlink" title="2.4 JAVA开发环境搭建"></a>2.4 JAVA开发环境搭建</h2><h3 id="2-4-1-配置环境变量path"><a href="#2-4-1-配置环境变量path" class="headerlink" title="2.4.1 配置环境变量path"></a>2.4.1 配置环境变量path</h3><p>为什么要配置path？ 为了打开DOS命令行，在任意目录下敲入javac&#x2F;java 都可以执行<br>看一个现象→在dos命令行[快捷键 win + r]中敲入javac，出现错误提示</p>
+<blockquote>
+<p>错误原因：当前执行的程序在当前目录下如果不存在，win10系统会在系统中已有的一个名为path的环境变量指定的目录中查找，如果仍然未找到，会出现以上的错误提示。<br>所以进入到 jdk安装路径\bin目录下，输入cmd，执行javac，会看到javac参数提示信息。<br>配置环境变量path的步骤</p>
+</blockquote>
+<ol>
+<li>我的电脑–属性–高级系统设置–环境变量</li>
+<li>增加JAVA_HOME环境变量，指向jdk的安装目录（本电脑的是H:\computer_science_study\java\jdk，以后换新的电脑直接 d:\program\hspjdk8）</li>
+<li>编辑path环境变量，增加%JAVA_HOME%\bin</li>
+<li>打开DOS命令行，任意目录下敲入javac&#x2F;java。如果出现javac的参数信息，配置成功<br>javac - version<br>java - version</li>
+</ol>
+<p>备注：苹果的下载不一样，但是现在我没买苹果，以后有钱再看吧</p>
+<p>配置环境变量时，Administrator的用户变量和系统变量的区别？</p>
+<blockquote>
+<p>前者只对当前用户生效，换了用户之后就不生效了，后者系统下所有用户都生效</p>
+</blockquote>
+<h2 id="2-5-DOS常用指令"><a href="#2-5-DOS常用指令" class="headerlink" title="2.5 DOS常用指令"></a>2.5 DOS常用指令</h2><ul>
+<li>善用上下光标调用命令，特别是重复的</li>
+</ul>
+<h2 id="2-6-JAVA快速入门"><a href="#2-6-JAVA快速入门" class="headerlink" title="2.6 JAVA快速入门"></a>2.6 JAVA快速入门</h2><h3 id="2-6-1-快速入门实例"><a href="#2-6-1-快速入门实例" class="headerlink" title="2.6.1 快速入门实例"></a>2.6.1 快速入门实例</h3><ul>
+<li><p>需求说明<br>要求开发一个Hello.java 程序，可以输出”hello, world”</p>
+</li>
+<li><p>开发步骤</p>
+<ol>
+<li>将Java代码编写到扩展名为Hello.java的文件中。[代码说明]</li>
+<li>通过javac命令对java文件进行编译，生成.class文件。</li>
+<li>通过java命令对生成的class文件进行运行（运行的时候不要运行java Hello.class, 运行java Hello即可。这是规定，同时在运行的时候java Hello就是运行的Hello这个类，如果是java Hello.class, 运行的则是Hello.class这个类，查找不到）</li>
+</ol>
+</li>
+<li><p>运行原理示意图</p>
+<ul>
+<li>查看java-basic-teacher-hanshunping-2.3.1</li>
+</ul>
+</li>
+</ul>
+<p>练习2.6.1：开发一个Hello2.java 程序，可以输出”老王 is studying Java”</p>
+<blockquote>
+<p>Sublime Text 鼠标+滑轮可以调整大小<br>Sublime Text的文件的编码（文件有中文的时候）要调整成GBK，file → save with encoding → chinese，记得重新保存<br>可以在控制台顶部白框，右键属性，查看当前代码页的编码</p>
+</blockquote>
+<h3 id="2-6-2-java执行流程分析"><a href="#2-6-2-java执行流程分析" class="headerlink" title="2.6.2 java执行流程分析"></a>2.6.2 java执行流程分析</h3><p><strong>编写.java文件（源文件）→ javac（程序是javac.exe, 运行的时候直接写javac） 编译 → .class文件（字节码文件） → java 运行（对应的程序是java.exe, 这个运行的本质是把.class文件装载到虚拟机里面去执行）→ 结果</strong></p>
+<p>什么是编译？</p>
+<p>javac Hello.java</p>
+<ol>
+<li>有了java源文件，通过编译器将其编译成JVM可以识别的字节码文件（.class）</li>
+<li>在该源文件目录下，通过javac编译工具对Hello.java文件进行编译</li>
+<li>如果程序没有错误，没有任何提示，在当前目录下会出现一个Hello.class文件，该文件为字节码文件，也是可以执行的java的程序<br>2022.5.6 看到了P17的02：23</li>
+</ol>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>垚</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://example.com/2022/04/24/java-basic-teacher-hanshunping/" title="零基础JAVA课程笔记">http://example.com/2022/04/24/java-basic-teacher-hanshunping/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2022/04/27/python-2/" rel="prev" title="莫凡Python基础笔记"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">莫凡Python基础笔记</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2022/03/14/study-data-analysis-02/" rel="next" title="数据分析自学文档02之Excel基础"><span class="post-nav-text">数据分析自学文档02之Excel基础</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2022 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 垚</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.1.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.11</span></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div></body></html>

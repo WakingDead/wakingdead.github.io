@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="垚"><meta name="copyright" content="垚"><meta name="generator" content="Hexo 6.1.0"><meta name="theme" content="hexo-theme-yun"><title>《零基础入门学习Python》学习笔记 | 三味书屋</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.2.4/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"垚的三味书屋","version":"1.8.11","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":null},"vendors":{"darken":"https://cdn.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><meta name="description" content="愿程序永不bug   P2 我和python的第一次亲密接触从IDLE启动pythonIDLE是什么？  一个Python Shell，shell的意思就是“外壳”，基本上来说，就是一个通过键入文本与程序交互的途径Alt + n 浏览下一条语句Alt + p 浏览上一条语句  课后练习部分Python 是什么类型的语言？  Python是脚本语言  脚本语言(Scripting language">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《零基础入门学习Python》学习笔记">
+<meta property="og:url" content="http://example.com/2022/03/12/python-1/index.html">
+<meta property="og:site_name" content="三味书屋">
+<meta property="og:description" content="愿程序永不bug   P2 我和python的第一次亲密接触从IDLE启动pythonIDLE是什么？  一个Python Shell，shell的意思就是“外壳”，基本上来说，就是一个通过键入文本与程序交互的途径Alt + n 浏览下一条语句Alt + p 浏览上一条语句  课后练习部分Python 是什么类型的语言？  Python是脚本语言  脚本语言(Scripting language">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-12T13:21:00.000Z">
+<meta property="article:modified_time" content="2022-04-27T02:00:40.016Z">
+<meta property="article:author" content="垚">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="基础学习">
+<meta name="twitter:card" content="summary"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="垚"><img width="96" loading="lazy" src="/yun.png" alt="垚"></a><div class="site-author-name"><a href="/about/">垚</a></div><span class="site-name">三味书屋</span><sub class="site-subtitle"></sub><div class="site-desciption">探索这个奇妙的世界</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">10</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">7</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:wuyaorui2001@163.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-%E6%88%91%E5%92%8Cpython%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%B2%E5%AF%86%E6%8E%A5%E8%A7%A6"><span class="toc-number">1.</span> <span class="toc-text">P2 我和python的第一次亲密接触</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8EIDLE%E5%90%AF%E5%8A%A8python"><span class="toc-number">1.1.</span> <span class="toc-text">从IDLE启动python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%83%A8%E5%88%86"><span class="toc-number">1.2.</span> <span class="toc-text">课后练习部分</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P3-%E5%B0%8F%E6%8F%92%E6%9B%B2%E4%B9%8B%E5%8F%98%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.</span> <span class="toc-text">P3 小插曲之变量和字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E6%9B%B2%E4%B9%8B%E5%8F%98%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text">插曲之变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-number">2.1.1.</span> <span class="toc-text">使用变量需要注意的地方</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E6%9B%B2%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.2.</span> <span class="toc-text">插曲之字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.2.1.</span> <span class="toc-text">原始字符串</span></a></li></ol></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="http://example.com/2022/03/12/python-1/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="垚"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="三味书屋"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">《零基础入门学习Python》学习笔记</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2022-03-12 21:21:00" itemprop="dateCreated datePublished" datetime="2022-03-12T21:21:00+08:00">2022-03-12</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="修改时间：2022-04-27 10:00:40" itemprop="dateModified" datetime="2022-04-27T10:00:40+08:00">2022-04-27</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Python%E5%AD%A6%E4%B9%A0/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Python学习</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/Python/" style="--text-color:#3776ab"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">Python</span></a><a class="tag-item" href="/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">基础学习</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><blockquote>
+<p>愿程序永不bug</p>
+</blockquote>
+<hr>
+<h1 id="P2-我和python的第一次亲密接触"><a href="#P2-我和python的第一次亲密接触" class="headerlink" title="P2 我和python的第一次亲密接触"></a>P2 我和python的第一次亲密接触</h1><h2 id="从IDLE启动python"><a href="#从IDLE启动python" class="headerlink" title="从IDLE启动python"></a>从IDLE启动python</h2><p>IDLE是什么？</p>
+<blockquote>
+<p>一个Python Shell，shell的意思就是“外壳”，基本上来说，就是一个通过键入文本与程序交互的途径<br>Alt + n 浏览下一条语句<br>Alt + p 浏览上一条语句</p>
+</blockquote>
+<h2 id="课后练习部分"><a href="#课后练习部分" class="headerlink" title="课后练习部分"></a>课后练习部分</h2><p>Python 是什么类型的语言？</p>
+<blockquote>
+<p>Python是脚本语言</p>
+<blockquote>
+<p>脚本语言(Scripting language)是电脑编程语言，因此也能让开发者藉以编写出让电脑听命行事的程序。以简单的方式快速完成某些复杂的事情通常是创造脚本语言的重要原则，基于这项原则，使得脚本语言通常比 C语言、C++语言 或 Java 之类的系统编程语言要简单容易。<br>也让脚本语言另有一些属于脚本语言的特性：</p>
+<blockquote>
+<ul>
+<li>语法和结构通常比较简单</li>
+<li>学习和使用通常比较简单</li>
+<li>通常以容易修改程序的“解释”作为运行方式，而不需要“编译”</li>
+<li>程序的开发产能优于运行性能<br>一个脚本可以使得本来要用键盘进行的相互式操作自动化。一个Shell脚本主要由原本需要在命令行输入的命令组成，或在一个文本编辑器中，用户可以使用脚本来把一些常用的操作组合成一组串行。主要用来书写这种脚本的语言叫做脚本语言。很多脚本语言实际上已经超过简单的用户命令串行的指令，还可以编写更复杂的程序。</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> print() 的作用是什么？Python 中表示乘法的符号是什么？</p>
+<blockquote>
+<p>print() 会在输出窗口中显示一些文本（在这一讲中，输出窗口就是IDLE shell窗口）。<br>Python中的乘号是*（星号）。</p>
+</blockquote>
+<p>为什么 &gt;&gt;&gt;print(‘I love fishc.com ‘ * 5) 可以正常执行，但 &gt;&gt;&gt;print(‘I love fishc.com ‘ + 5) 却报错？</p>
+<blockquote>
+<p>在 Python 中不能把两个完全不同的东西加在一起，比如说数字和文本，正是这个原因，&gt;&gt;&gt;print(‘I love fishc.com ‘ + 5) 才会报错。这就像是在说“五只小甲鱼加上苍井空会是多少？”一样没有多大意义，结果可能是五，可能是六，也可能是八！不过乘以一个整数来翻倍就具有一定的意义了，前边的例子就是将 “I love fishc.com” 这个字符串打印五次。</p>
+</blockquote>
+<p>如果我需要在一个字符串中嵌入一个双引号，正确的做法是？</p>
+<blockquote>
+<p>你有两个选择：可以利用反斜杠（\）对双引号转义：&quot;，或者用单引号引起这个字符串。例如：’ I l”o”ve fishc.com ‘。</p>
+</blockquote>
+<hr>
+<h1 id="P3-小插曲之变量和字符串"><a href="#P3-小插曲之变量和字符串" class="headerlink" title="P3 小插曲之变量和字符串"></a>P3 小插曲之变量和字符串</h1><h2 id="插曲之变量"><a href="#插曲之变量" class="headerlink" title="插曲之变量"></a>插曲之变量</h2><ul>
+<li>变量名就像我们现实社会的名字，把一个值赋值给一个名字时，Ta会存储在内存中，称之为变量（variable）, 在大多数语言中，都把这种行为成为“给变量赋值” 或 “把值存储在变量中”。</li>
+<li>不过Python与大多数其他计算机语言的做法稍有不同，Ta并不是把值存储在变量中，而更像是把名字贴在值的上边。</li>
+<li>所以有些Python程序员会说“Python”没有“变量”，只有“名字”。</li>
+</ul>
+<h3 id="使用变量需要注意的地方"><a href="#使用变量需要注意的地方" class="headerlink" title="使用变量需要注意的地方"></a>使用变量需要注意的地方</h3><ul>
+<li>在使用变量之前，需要对其先赋值</li>
+<li>变量名可以包括字母、数字、下划线，但是变量名称不能以数字开头</li>
+<li>字母可以是大写或小写，但大小写是不同的。也就是说fish和FishC对于Python来说是完全不同的两个名字</li>
+<li>等号（&#x3D;）是赋值的意思，左边是名字，右边是值，不可以反</li>
+<li>变量的命名理论可以取任何合法的名字，但是作为一个优秀的程序员，请讲尽量给变量取一个专业一点的名字</li>
+</ul>
+<h2 id="插曲之字符串"><a href="#插曲之字符串" class="headerlink" title="插曲之字符串"></a>插曲之字符串</h2><ul>
+<li><p>到目前位置，我们所认知的字符串就是引号内的一切东西，我们也把字符串叫做文本，文本和数字是截然不同的。</p>
+</li>
+<li><p>要考试Python你在创建一个字符串，就要在字符两边加上引号，可以是单引号或双引号，但是必须成对。</p>
+</li>
+</ul>
+<p>如果字符串中需要出现单引号或者双引号怎么办？</p>
+<blockquote>
+<p>使用我们的转移符号（\）对字符串中的引号进行转义<br>用单引号引起这个字符串</p>
+</blockquote>
+<h3 id="原始字符串"><a href="#原始字符串" class="headerlink" title="原始字符串"></a>原始字符串</h3><p>好像反斜杠是一个好东西,但不妨试一试</p>
+<blockquote>
+<p>str &#x3D; ‘C:\now’<br>我们可以对反斜杠自身进行转义<br>str &#x3D; ‘C:\now’<br>但是对于一个字符串中有很多个反斜杠的情况，我们该怎么办呢？</p>
+</blockquote>
+<blockquote>
+<p>原始字符串</p>
+<blockquote>
+<p>原始字符串的使用非常简单，只需要在字符串前面加上一个英文字母r即可</p>
+<blockquote>
+<p>str &#x3D; r’C:\now’ 但是原始字符串最后不能反斜杠如 str &#x3D; r’C:\now’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>垚</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://example.com/2022/03/12/python-1/" title="《零基础入门学习Python》学习笔记">http://example.com/2022/03/12/python-1/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2022/03/13/technology-first/" rel="prev" title="写给自己：关于网站后续更新以及部署的参考文档"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">写给自己：关于网站后续更新以及部署的参考文档</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2022/03/12/my-first-passage/" rel="next" title="欢迎来到我的三味书屋"><span class="post-nav-text">欢迎来到我的三味书屋</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2022 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 垚</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.1.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.11</span></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div></body></html>
