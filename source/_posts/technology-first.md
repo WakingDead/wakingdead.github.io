@@ -22,6 +22,27 @@ categories:
 [官方文档](https://hexo.io/zh-cn/docs/)
 
 # 一些会用到的步骤
+
+创建文档：右键`wakingdead.github.io`文件夹，点击`GIT Bash Here`,输入代码`hexo new post xxx`。在`Front-matter`栏目中填写`update`、`date`、`tags`、`categories`。
+
+```
+# categories 的两种语法
+
+#单分类
+categories:
+    - 父类
+    - 子类
+
+#多分类
+categories:
+    - [Diary, PlayStation]
+    - [Diary, Games]
+    - [Life]
+
+```
+
+
+
 更改主题：需要在`_config.yun.yml`文件中，按照自己的需要更改主题。更改完成后，右键`wakingdead.github.io`文件夹，点击`GIT Bash Here`,输入代码`npm i hexo-theme-yun@latest`。
 
 写新的文档：右键`wakingdead.github.io`文件夹，点击`GIT Bash Here`,输入代码`hexo new post xxx`,即可新建`xxx.md`文件，在文档中内容即可
