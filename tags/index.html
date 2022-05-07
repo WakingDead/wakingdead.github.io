@@ -27,7 +27,7 @@ document.addEventListener("pjax:success", initScrollReveal);
   const wordcloud_canvas = document.getElementById('wordcloud-canvas')
   wordcloud_canvas.width = document.querySelector('#page').clientWidth - 16
   wordcloud_canvas.height = 350
-  let wordcloud_config = {"list":[["-- JAVA -- 技术",1.1,"/tags/JAVA-技术/"],["日常",1.1,"/tags/日常/"],["Hexo",1.1,"/tags/Hexo/"],["分享",1.1,"/tags/分享/"],["Python",1.2,"/tags/Python/"],["基础学习",1.2,"/tags/基础学习/"],["数据分析",1.2,"/tags/数据分析/"],["学习",1.2,"/tags/学习/"],["技术文档",1.1,"/tags/技术文档/"],["园说",1.1,"/tags/园说/"],["产品文档",1.1,"/tags/产品文档/"]],"fontFamily":"'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif","fontWeight":400,"gridSize":10,"weightFactor":13,"backgroundColor":"transparent","color":"random-dark"}
+  let wordcloud_config = {"list":[["日常",1.1,"/tags/日常/"],["Hexo",1.1,"/tags/Hexo/"],["分享",1.1,"/tags/分享/"],["Python",1.2,"/tags/Python/"],["基础学习",1.2,"/tags/基础学习/"],["-- JAVA -- 技术",1.1,"/tags/JAVA-技术/"],["数据分析",1.2,"/tags/数据分析/"],["学习",1.2,"/tags/学习/"],["技术文档",1.1,"/tags/技术文档/"],["园说",1.1,"/tags/园说/"],["产品文档",1.1,"/tags/产品文档/"]],"fontFamily":"'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif","fontWeight":400,"gridSize":10,"weightFactor":13,"backgroundColor":"transparent","color":"random-dark"}
   wordcloud_config.hover = function(item, dimension){
     if (!dimension) {
       wordbox.hidden = true
